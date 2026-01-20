@@ -9,8 +9,9 @@ export const forwardToUserService = async (req, res) => {
       url: `${USERS_BASE_URL}${req.originalUrl}`,
     });
 
-    return res.status(response.status).send(response.data);
+    return res.status(response.status).json(response.data);
   } catch (e) {
-    return res.status(502).send({ message: "Bad Gateway" });
+    console.log({ message: e.message });
+    return res.status(502).json({ message: "Bad Gateway" });
   }
 };

@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop Basic",
+    "category": "Electronics",
+    "price": 189.16,
+    "stock": 118
+  },
+  {
+    "id": 2,
+    "name": "Laptop Pro",
+    "category": "Electronics",
+    "price": 599.53,
+    "stock": 94
+  },
+  {
+    "id": 3,
+    "name": "Laptop Ultra",
+    "category": "Electronics",
+    "price": 692.93,
+    "stock": 50
+  },
+  {
+    "id": 4,
+    "name": "Smartphone Basic",
+    "category": "Electronics",
+    "price": 673.25,
+    "stock": 52
+  },
+  {
+    "id": 5,
+    "name": "Smartphone Pro",
+    "category": "Electronics",
+    "price": 841.41,
+    "stock": 96
+  },
+  {
+    "id": 6,
+    "name": "Smartphone Ultra",
+    "category": "Electronics",
+    "price": 1236.16,
+    "stock": 122
+  },
+  {
+    "id": 7,
+    "name": "Tablet Basic",
+    "category": "Electronics",
+    "price": 1141.42,
+    "stock": 34
+  },
+  {
+    "id": 8,
+    "name": "Tablet Pro",
+    "category": "Electronics",
+    "price": 472.6,
+    "stock": 58
+  },
+  {
+    "id": 9,
+    "name": "Tablet Ultra",
+    "category": "Electronics",
+    "price": 1331.9,
+    "stock": 23
+  },
+  {
+    "id": 10,
+    "name": "Monitor Basic",
+    "category": "Electronics",
+    "price": 377.34,
+    "stock": 90
+  },
+  {
+    "id": 11,
+    "name": "Monitor Pro",
+    "category": "Electronics",
+    "price": 1366.23,
+    "stock": 39
+  },
+  {
+    "id": 12,
+    "name": "Monitor Ultra",
+    "category": "Electronics",
+    "price": 934.16,
+    "stock": 167
+  },
+  {
+    "id": 13,
+    "name": "Keyboard Basic",
+    "category": "Accessories",
+    "price": 1353.55,
+    "stock": 194
+  },
+  {
+    "id": 14,
+    "name": "Keyboard Pro",
+    "category": "Accessories",
+    "price": 866.79,
+    "stock": 128
+  },
+  {
+    "id": 15,
+    "name": "Keyboard Ultra",
+    "category": "Accessories",
+    "price": 412.04,
+    "stock": 11
+  },
+  {
+    "id": 16,
+    "name": "Mouse Basic",
+    "category": "Accessories",
+    "price": 467.09,
+    "stock": 122
+  },
+  {
+    "id": 17,
+    "name": "Mouse Pro",
+    "category": "Accessories",
+    "price": 283.47,
+    "stock": 132
+  },
+  {
+    "id": 18,
+    "name": "Mouse Ultra",
+    "category": "Accessories",
+    "price": 1231.07,
+    "stock": 170
+  },
+  {
+    "id": 19,
+    "name": "Headphones Basic",
+    "category": "Audio",
+    "price": 79.1,
+    "stock": 181
+  },
+  {
+    "id": 20,
+    "name": "Headphones Pro",
+    "category": "Audio",
+    "price": 621.82,
+    "stock": 54
+  },
+  {
+    "id": 21,
+    "name": "Headphones Ultra",
+    "category": "Audio",
+    "price": 1407.92,
+    "stock": 167
+  },
+  {
+    "id": 22,
+    "name": "Printer Basic",
+    "category": "Office",
+    "price": 499.68,
+    "stock": 102
+  },
+  {
+    "id": 23,
+    "name": "Printer Pro",
+    "category": "Office",
+    "price": 1277.62,
+    "stock": 103
+  },
+  {
+    "id": 24,
+    "name": "Printer Ultra",
+    "category": "Office",
+    "price": 885.68,
+    "stock": 66
+  },
+  {
+    "id": 25,
+    "name": "Router Basic",
+    "category": "Networking",
+    "price": 76.65,
+    "stock": 181
+  },
+  {
+    "id": 26,
+    "name": "Router Pro",
+    "category": "Networking",
+    "price": 1311.86,
+    "stock": 61
+  },
+  {
+    "id": 27,
+    "name": "Router Ultra",
+    "category": "Networking",
+    "price": 81.81,
+    "stock": 176
+  },
+  {
+    "id": 28,
+    "name": "Webcam Basic",
+    "category": "Accessories",
+    "price": 651.01,
+    "stock": 57
+  },
+  {
+    "id": 29,
+    "name": "Webcam Pro",
+    "category": "Accessories",
+    "price": 1325.94,
+    "stock": 187
+  },
+  {
+    "id": 30,
+    "name": "Webcam Ultra",
+    "category": "Accessories",
+    "price": 451.37,
+    "stock": 200
+  }
+]

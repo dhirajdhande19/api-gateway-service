@@ -7,9 +7,9 @@ export const authMiddleware = async (req, res, next) => {
     const token = req.headers?.authorization?.split(" ")[1];
     if (!token) {
       console.log(
-        "Status : Fail\nFailure reason: No token provided\n-----Auth Check Fail-----"
+        "status : Fail\nfailure reason: No token provided\n-----Auth Check Fail-----\n",
       );
-      return res.status(401).send({ message: "Unauthorized" });
+      return res.status(401).json({ message: "Unauthorized" });
     }
 
     const user = jwt.verify(token, JWT_SECRET);
@@ -19,7 +19,7 @@ export const authMiddleware = async (req, res, next) => {
     if (user._id) {
       console.log(`userId: ${user._id}`);
     }
-    console.log("Status : Success\n-----Auth Check Success-----");
+    console.log("status : success\n-----Auth Check Success-----\n");
 
     // set decoded/verfied user to req.user so services can access them easily
     req.user = user;
@@ -29,6 +29,7 @@ export const authMiddleware = async (req, res, next) => {
       message: "Error occured while validating auth token",
       details: e.message,
     });
-    return res.status(401).send({ message: "Unauthorized" });
+    console.log("status : sail\n-----Auth Check Fail-----\n");
+    return res.status(401).json({ message: "Unauthorized" });
   }
 };
