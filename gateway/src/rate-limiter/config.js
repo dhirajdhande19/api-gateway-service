@@ -1,5 +1,6 @@
 import Redis from "ioredis";
 import { fixedWindowCounter } from "./algorithms/fixedWindow.js";
+import { slidingWindowLog } from "./algorithms/slidingWindowLog.js";
 const redis = new Redis();
 
 redis.on("error", (e) => {
@@ -8,24 +9,25 @@ redis.on("error", (e) => {
 
 export const stratergies = {
   fixed: fixedWindowCounter,
+  slidingLog: slidingWindowLog,
 };
 
 export const RATE_LIMIT_CONFIG = {
   default: {
-    algorithm: "fixed", // fixed
+    algorithm: "slidingLog", // fixed
     limit: 5,
     window: 60, // seconds
   },
 
   routes: {
     "/api/users": {
-      algorithm: "fixed",
+      algorithm: "slidingLog",
       limit: 5,
       window: 60,
     },
 
     "/api/orders": {
-      algorithm: "fixed",
+      algorithm: "slidingLog",
       limit: 10,
       window: 60,
     },

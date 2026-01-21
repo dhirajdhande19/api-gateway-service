@@ -2,6 +2,11 @@ import { RATE_LIMIT_CONFIG, stratergies } from "./config.js";
 
 export const rateLimiter = async (req, res, next) => {
   console.log(`-----Rate Limit Check Start-----\nroute: ${req.originalUrl}`);
+  if (req.user?._id) {
+    console.log(`userId: ${req.user._id}`);
+  } else {
+    console.log(`public ip: ${req.ip}`);
+  }
 
   const routeConfig =
     RATE_LIMIT_CONFIG.routes[req.route?.path] || RATE_LIMIT_CONFIG.default; // fallback to default
@@ -21,7 +26,7 @@ export const rateLimiter = async (req, res, next) => {
     console.log("status: fail\n-----Rate Limit Fail-----\n");
     return res.status(429).json({ message: "Too Many Requests" });
   }
-  console.log("status: success\n-----Rate Limit Pass-----\n");
+  console.log("-----Rate Limit Pass-----\n");
   next();
 };
 
