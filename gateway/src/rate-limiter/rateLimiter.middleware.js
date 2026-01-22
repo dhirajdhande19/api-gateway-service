@@ -2,11 +2,10 @@ import { RATE_LIMIT_CONFIG, stratergies } from "./config.js";
 
 export const rateLimiter = async (req, res, next) => {
   console.log(`-----Rate Limit Check Start-----\nroute: ${req.originalUrl}`);
-  if (req.user?._id) {
-    console.log(`userId: ${req.user._id}`);
-  } else {
-    console.log(`public ip: ${req.ip}`);
-  }
+
+  console.log(
+    req.user?._id ? `userId: ${req.user._id}` : `public ip: ${req.ip}`,
+  );
 
   const routeConfig =
     RATE_LIMIT_CONFIG.routes[req.route?.path] || RATE_LIMIT_CONFIG.default; // fallback to default
@@ -32,9 +31,9 @@ export const rateLimiter = async (req, res, next) => {
 
 /*
     Rate Limiting Algorithms.
-    1. Fixed Window Counter
-    2. Sliding Window Log
-    3. Sliding Window Counter
-    4. Token Bucket
-    5. Leaky Bucket
+    1. Fixed Window Counter - Done
+    2. Sliding Window Log - Done
+    3. Sliding Window Counter - Done
+    4. Token Bucket - Pending
+    5. Leaky Bucket - Pending
 */
