@@ -3,6 +3,7 @@ import redis from "../config.js";
 // Fixed Window Counter Algorithm
 export const fixedWindowCounter = async (req, routeConfig) => {
   try {
+    console.log("Algorithm: Fixed Window Counter");
     const key = req.user?._id
       ? `key:api-${req.originalUrl}:algo-${routeConfig.algorithm}:userId-${req.user._id}`
       : `key:api-${req.originalUrl}:algo-${routeConfig.algorithm}:ip-${req.ip}`;

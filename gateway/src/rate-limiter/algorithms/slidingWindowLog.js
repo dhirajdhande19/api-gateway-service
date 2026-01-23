@@ -2,6 +2,7 @@ import redis from "../config.js";
 
 export const slidingWindowLog = async (req, routeConfig) => {
   try {
+    console.log("Algorithm: Sliding Window Log");
     const key = req.user?._id
       ? `key:api-${req.originalUrl}:algo-${routeConfig.algorithm}:userId-${req.user._id}`
       : `key:api-${req.originalUrl}:algo-${routeConfig.algorithm}:ip-${req.ip}`;

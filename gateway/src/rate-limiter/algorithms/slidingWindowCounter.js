@@ -2,6 +2,7 @@ import redis from "../config.js";
 
 export const slidingWindowCounter = async (req, routeConfig) => {
   try {
+    console.log("Algorithm: Sliding Window Counter");
     const now = Date.now();
     const windowSize = routeConfig.window * 1000; // convert to ms
     const currWindow = Math.floor(now / windowSize);
