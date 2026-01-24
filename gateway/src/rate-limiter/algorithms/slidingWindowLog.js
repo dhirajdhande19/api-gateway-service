@@ -1,5 +1,6 @@
 import redis from "../config.js";
 
+// Sliding Window Log Algorithm
 export const slidingWindowLog = async (req, routeConfig) => {
   try {
     console.log("Algorithm: Sliding Window Log");
@@ -25,7 +26,7 @@ export const slidingWindowLog = async (req, routeConfig) => {
     console.log(`status: success`);
     return true; // allow req to pass through
   } catch (e) {
-    console.log(`status: fail\nError occured from redis: ${e.message}`);
+    console.log(`status: fail\nfailure reason:  ${e.message}`);
     return true; // let requests pass
   }
 };

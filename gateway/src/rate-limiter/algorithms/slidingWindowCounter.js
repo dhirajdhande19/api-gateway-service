@@ -1,5 +1,6 @@
 import redis from "../config.js";
 
+// Sliding Window Counter Algorithm
 export const slidingWindowCounter = async (req, routeConfig) => {
   try {
     console.log("Algorithm: Sliding Window Counter");
@@ -42,7 +43,7 @@ export const slidingWindowCounter = async (req, routeConfig) => {
     console.log("status: success");
     return true;
   } catch (e) {
-    console.log(`status: fail\nError occured from redis: ${e.message}`);
+    console.log(`status: fail\nfailure reason:  ${e.message}`);
     return true; // let requests pass
   }
 };

@@ -1,5 +1,6 @@
 import redis from "../config.js";
 
+// Token Bucket Algorithm
 export const tokenBucket = async (req, routeConfig) => {
   try {
     console.log("Algorithm: Token Bucket");
@@ -42,7 +43,7 @@ export const tokenBucket = async (req, routeConfig) => {
 
     return true;
   } catch (e) {
-    console.log(`status: fail\nError occured from redis: ${e.message}`);
+    console.log(`status: fail\nfailure reason:  ${e.message}`);
     return true; // let requests pass
   }
 };

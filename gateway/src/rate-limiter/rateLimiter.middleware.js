@@ -35,12 +35,3 @@ export const rateLimiter = async (req, res, next) => {
     next();
   }
 };
-
-/*
-    Rate Limiting Algorithms.
-    1. Fixed Window Counter - Done
-    2. Sliding Window Log - Done
-    3. Sliding Window Counter - Done
-    4. Token Bucket - Done
-    5. Leaky Bucket - Pending
-*/
