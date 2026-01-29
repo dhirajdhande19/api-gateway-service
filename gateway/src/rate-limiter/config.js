@@ -4,13 +4,18 @@ import { slidingWindowLog } from "./algorithms/slidingWindowLog.js";
 import { slidingWindowCounter } from "./algorithms/slidingWindowCounter.js";
 import { tokenBucket } from "./algorithms/tokenBucket.js";
 import { leakyBucket } from "./algorithms/leakyBucket.js";
-const redis = new Redis();
+import { REDIS_URL } from "../config/env.js";
+const redis = new Redis(REDIS_URL);
 
 redis.on("error", (e) => {
-  console.log({
+  console.error({
     message: "Error occured from redis",
     details: e.message || "Make sure Redis is running (check docker)",
   });
+});
+
+redis.on("connect", () => {
+  console.log("Redis Connected");
 });
 
 export const stratergies = {

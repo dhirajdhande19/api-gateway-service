@@ -30,8 +30,8 @@ export const rateLimiter = async (req, res, next) => {
     console.log("-----Rate Limit Pass-----\n");
     next();
   } catch (e) {
-    console.log("status: fail");
-    console.log(`failure reason: ${e.message}\n-----Rate Limit Fail-----\n`);
+    console.error("status: fail");
+    console.error(`failure reason: ${e.message}\n-----Rate Limit Fail-----\n`);
     next();
   }
 };

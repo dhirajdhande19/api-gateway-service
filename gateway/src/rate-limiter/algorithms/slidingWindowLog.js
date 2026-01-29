@@ -26,7 +26,7 @@ export const slidingWindowLog = async (req, routeConfig) => {
     console.log(`status: success`);
     return true; // allow req to pass through
   } catch (e) {
-    console.log(`status: fail\nfailure reason:  ${e.message}`);
+    console.error(`status: fail\nfailure reason:  ${e.message}`);
     return true; // let requests pass
   }
 };

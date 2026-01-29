@@ -25,11 +25,11 @@ export const authMiddleware = async (req, res, next) => {
     req.user = user;
     next();
   } catch (e) {
-    console.log({
+    console.error({
       message: "Error occured while validating auth token",
       details: e.message,
     });
-    console.log("status : fail\n-----Auth Check Fail-----\n");
+    console.error("status : fail\n-----Auth Check Fail-----\n");
     return res.status(401).json({ message: "Unauthorized" });
   }
 };

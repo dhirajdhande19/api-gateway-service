@@ -1,11 +1,11 @@
 import e from "express";
 const app = e();
-const PORT = 4002;
+import { ORDERS_SERVICE_PORT } from "./env.js";
 
 import orderRoutes from "./orders.routes.js";
 
 app.use("/api/orders", orderRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Server running on: ${PORT}`);
+app.listen(ORDERS_SERVICE_PORT, () => {
+  console.log(`Server running on: ${ORDERS_SERVICE_PORT}`);
 });

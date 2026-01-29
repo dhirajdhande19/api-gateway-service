@@ -1,7 +1,7 @@
 import app from "./app.js";
 const server = app;
-const PORT = 3000;
+import { GATEWAY_PORT } from "./config/env.js";
 
-server.listen(PORT, () => {
-  console.log(`Running on port: ${PORT}`);
+server.listen(GATEWAY_PORT, () => {
+  console.log(`Running on port: ${GATEWAY_PORT}`);
 });

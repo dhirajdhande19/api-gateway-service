@@ -1,11 +1,11 @@
 import e from "express";
 const app = e();
-const PORT = 4001;
+import { USERS_SERVICE_PORT } from "./env.js";
 
 import userRoutes from "./user.routes.js";
 
 app.use("/api/users", userRoutes);
 
-app.listen(PORT, () => {
-  console.log(`Server running on: ${PORT}`);
+app.listen(USERS_SERVICE_PORT, () => {
+  console.log(`Server running on: ${USERS_SERVICE_PORT}`);
 });

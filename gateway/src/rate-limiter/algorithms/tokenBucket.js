@@ -43,7 +43,7 @@ export const tokenBucket = async (req, routeConfig) => {
 
     return true;
   } catch (e) {
-    console.log(`status: fail\nfailure reason:  ${e.message}`);
+    console.error(`status: fail\nfailure reason:  ${e.message}`);
     return true; // let requests pass
   }
 };

@@ -11,7 +11,7 @@ export const forwardToOrdersService = async (req, res) => {
 
     return res.status(response.status).json(response.data);
   } catch (e) {
-    console.log({ message: e.message });
+    console.error({ message: e.message });
     return res.status(503).json({ message: "Bad Gateway" });
   }
 };

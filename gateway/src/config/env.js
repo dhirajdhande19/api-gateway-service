@@ -8,3 +8,9 @@ export const PRODUCTS_BASE_URL = process.env.PRODUCTS_BASE_URL;
 
 // JWT
 export const JWT_SECRET = process.env.JWT_SECRET;
+
+// PORT
+export const GATEWAY_PORT = process.env.GATEWAY_PORT;
+
+// Redis
+export const REDIS_URL = process.env.REDIS_URL;
