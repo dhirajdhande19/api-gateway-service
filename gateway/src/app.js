@@ -9,4 +9,8 @@ app.use("/api/users", userRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/products", productRoutes);
 
+app.get("/ping", (req, res) => {
+  return res.status(200).json("pong");
+});
+
 export default app;
