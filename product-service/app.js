@@ -6,6 +6,6 @@ import productRoutes from "./products.routes.js";
 
 app.use("/api/products", productRoutes);
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`Server running on: ${PORT}`);
 });
