@@ -6,7 +6,7 @@ export const forwardToOrdersService = async (req, res) => {
     console.log({
       method: req.method,
       url: `${ORDERS_BASE_URL}${req.originalUrl}`,
-      headers: req.headers,
+      headers: { ...req.headers, host: undefined },
     });
     const response = await axios({
       method: req.method,
